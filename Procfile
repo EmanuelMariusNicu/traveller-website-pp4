@@ -1,1 +1,1 @@
-web: gunicorn.Traveller_Django.wsgi
+web: gunicorn Traveller_Django.wsgi
