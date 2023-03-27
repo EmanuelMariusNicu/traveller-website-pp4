@@ -20,6 +20,8 @@ class Trip(models.Model):
     budget = models.TextField()
     route = models.TextField()
     accommodation = models.TextField()
+    guide = models.TextField(blank=True)
+    additional_info = models.TextField(blank=True)
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
         User, related_name='trip_like', blank=True)

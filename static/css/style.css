@@ -1,12 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@200&family=Major+Mono+Display&family=Rajdhani:wght@300&display=swap')
+
 body {
-    background-color: #F9FAFC;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.navbar { 
+    background-color: #98d3d3;
+
+}
+#navbarText {
+    font-size: large;
 }
 
 .brand {
-    font-family: Lato, sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.9rem;
     font-weight: 700;
-    color: #4A4A4F;
+    color: #4e4f4a;
 }
 
 .red-o {
@@ -97,8 +106,12 @@ body {
 }
 
 .post-title {
-    margin-top: 20%;
+    margin-top: 10%;
     margin-left: 5%;
+}
+.post-budget {
+    color: #E84610;
+    margin-left:5%;
 }
 
 .post-subtitle {
@@ -139,4 +152,9 @@ body {
     color: #E84610;
     background: transparent;
     border: none;
+}
+footer {
+    background-color: #98d3d3;
+    font-size: large;
+
 }
