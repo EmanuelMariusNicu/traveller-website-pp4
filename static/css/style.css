@@ -1,21 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@200&family=Major+Mono+Display&family=Rajdhani:wght@300&display=swap')
 
 body {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Arima Madurai', sans-serif;
 }
 
-.navbar { 
-    background-color: #98d3d3;
+
+.container-fluid {
+    background-color: #c1dbcf;
+    
+    
+}
+
+#navbar { 
+    
+    padding-top: 0;
+    padding-bottom: 0;
 
 }
 #navbarText {
-    font-size: large;
+    font-size:medium;
+    
+
 }
+.navbar-brand {
+    color: #ebf0f0;
+    text-shadow: 1px 1px 1px #0c357d,
+             1px 2px 1px #3672e1,
+             
+            
+             1px 15px 10px rgba(115, 208, 208, 0.4),
+             1px 20px 30px rgba(25, 97, 133, 0.3),
+             1px 25px 50px rgba(51, 34, 167, 0.896);
+}
+.nav-item {
+    text-shadow: 1px 1px 1px #949ba7,
+             1px 2px 1px #6683b8,
+             1px 3px 1px #7183a6,
+             
+             1px 10px 5px rgba(231, 216, 216, 0.5),
+             1px 15px 10px rgba(214, 206, 206, 0.4),
+             
+             
+
+}
+.navbar-text {
+    margin-right: 20px;
+    color: #7cd868;
+}
+.w-color {
+    color: #e2cd2d;
+}
+
 
 .brand {
     font-size: 1.9rem;
     font-weight: 700;
-    color: #4e4f4a;
+    color: #7a7fb0;
 }
 
 .red-o {
@@ -27,7 +67,7 @@ body {
 }
 
 .light-bg {
-    background-color: #fff;
+    background-color: #1f2515;
 }
 
 .dark-bg {
@@ -35,7 +75,7 @@ body {
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: #c9f4f9;
 }
 
 .card {
@@ -56,7 +96,7 @@ body {
 }
 
 .author {
-    color: white;
+    color: rgb(255, 255, 255);
     margin: 4px;
     text-transform: uppercase;
 }
@@ -98,6 +138,10 @@ body {
 .post-link {
     text-decoration: none;
     color: #445261;
+}
+.nav-link {
+    font-size: large;
+    color: #E84610;
 }
 
 .post-link:hover,
@@ -154,7 +198,7 @@ body {
     border: none;
 }
 footer {
-    background-color: #98d3d3;
+    background-color: #c6e3e3;
     font-size: large;
 
 }

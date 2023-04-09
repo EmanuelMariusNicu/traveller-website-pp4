@@ -1,0 +1,22 @@
+{% load static %}
+
+<!-- Bootstrap card used across the site to showcase trips when user is browsing and searching -->
+<div class="card recipe-card m-2 text-start p-0 flex-grow-0" style="width: 18rem;">
+    <div class="card-image">
+        {% if not trip.featured_image %}
+        <img src="{% static 'images/travel.jpg' %}" class="card-img-top" alt="Placeholder image">
+        {% else %}
+        <img src=" {{ trip.featured_image.url }}" class="card-img-top" alt="Image of {{ trip.title }}">
+        {% endif %}
+      </div>
+  <!-- Quick info and stretched link -->
+  <div class="card-body">
+    <h4 class="card-title text-truncate">{{ trip.title }}</h4>
+    <p class="card-text card-caption text-truncate">{{ trip.content }}</p>
+    <div class="card-footer">
+      <span class="card-counter"><i class="far fa-heart fa-sm"></i> {{ trip.number_of_likes }}</span>
+      <span class="card-counter"><i class="far fa-comments"></i> {{ trip.count_comments }}</span>
+      <a href="{% url 'post_detail' trip.slug  %}" class="card-link stretched-link float-end">View</a>
+    </div>
+  </div>
+</div>

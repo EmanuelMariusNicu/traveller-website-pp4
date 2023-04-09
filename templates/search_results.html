@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+    <!-- Heading and info (dynamic) -->
+    <div class="row text-center mt-4">
+        {% if not searched %}
+        <div class="col-10 offset-1">
+            <!-- Nothing searched -->
+            <span class="icon-xl">
+                <i class="fa-solid fa-circle-exclamation"></i>
+            </span>
+            <h2 class="fs-1">Oops! You need to search for something!</h2>
+            <h3>Use the search bar at the top.</h3>
+        </div>
+        {% else %}
+        <div class="col-10 offset-1">
+            {% if not trips %}
+            <!-- Searched, but no results -->
+            <span class="icon-xl">
+                <i class="fa-solid fa-circle-exclamation"></i>
+            </span>
+            <h2 class="fs-1">Sorry! No results for '{{ searched }}'</h2>
+            <h3>Try again?</h3>
+            {% else %}
+            <!-- Search successful -->
+            <h2 class="fs-1 mt-2">Showing results for '{{ searched }}'</h2>
+            {% endif %}
+        </div>
+
+        {% if trips %}
+        <div
+            class="mt-4 py-4 justify-content-center d-flex bg-container bg-gradient rounded border border-warning border-opacity-50 flex-wrap">
+            {% for trip in trips %}
+            {% include "search_card.html" with trip=trip %}
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

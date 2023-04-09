@@ -3,6 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Trip
 from .forms import CommentForm
+from django.db.models import Q
 # Create your views here.
 
 
@@ -75,3 +76,45 @@ class TripLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+class SearchResults(View):
+    """
+    Custom view for displaying search results. Checks if the inputted string
+    appears in our trips.
+    """
+    # Tutorial to retrieve search term available at
+    # https://www.youtube.com/watch?v=AGtae4L5BbI
+    def post(self, request, *args, **kwargs):
+        searched = request.POST['search-bar']
+        trips = Trip.objects.filter(
+            Q(title__icontains=searched) |
+            Q(additional_info__icontains=searched) |
+            Q(route__icontains=searched),
+            status=1
+            )
+
+        return render(
+            request,
+            'search_results.html',
+            {'searched': searched, 'trips': trips}
+            )
+
+    def get(self, request, *args, **kwargs):
+        return render(request, 'search_results.html')
+
+
+def error_404_view(request, exception):
+    """
+    Custome 404 page
+    Tutorial at https://www.geeksforgeeks.org/django-creating-a-404-error-page/
+    """
+    return render(request, '404.html')
+
+
+def error_500_view(request):
+    """
+    Custome 500 page
+    Inspired by https://www.geeksforgeeks.org/django-creating-a-404-error-page/
+    """
+    return render(request, '500.html')
