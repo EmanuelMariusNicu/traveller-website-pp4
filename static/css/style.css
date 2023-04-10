@@ -161,7 +161,7 @@ body {
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color: #1080e8;
 }
 
 .post-title {
@@ -216,6 +216,12 @@ body {
 footer {
     background-color: #76abc4;
     font-size: large;
-    
+    color:#1e23a8;
 
+}
+.btn-floating {
+    color: #1e23a8;
+}
+.btn-floating:hover {
+    color: #a8b218;
 }

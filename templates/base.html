@@ -92,7 +92,8 @@
           Code Institute - 2023
         </div>
         <!-- Grid container -->
-        <div class="container">
+        <div class="row text-center mt-2">
+            <p class="m-0">Socials</p>
           <!-- Section: Social media -->
           <div class="mb-1">
             <!-- Facebook -->
@@ -104,6 +105,20 @@
             <!-- Github -->
             <a class="btn btn-floating m-1" href="" target="_blank" rel="nofollow" role="button"><i class="fab fa-github"></i></a>
           </div>
+        </div>
+        <div class="row">
+            <div class="d-flex flex-row justify-content-center">
+                <a class="m-1 text-decoration-none text-light" href="{% url 'terms_and_conditions' %}"
+                    aria-label="Link: Go to terms and conditions page.">Terms and Conditions</a>
+                <span class="m-1">|</span>
+                <a class="m-1 text-decoration-none text-light" href="{% url 'privacy_policy' %}"
+                    aria-label="Link: Go to privacy policy page.">Privacy Policy</a>
+                <span class="m-1">|</span>
+                <a class="m-1 text-decoration-none text-light" href="{% url 'contact_us' %}"
+                    aria-label="Link: Go to Contact Us page.">Contact Us</a>
+                <span class="m-1">|</span>
+                
+            </div>
         </div>
       </footer>
     <script>
