@@ -24,32 +24,26 @@
     </div>
 </div>
 
-<div class="container">
-    <div class="row g-2 ">
-        <div class="col-6">
-            <div class="p-3 border bg-light">
+<div class="container ">
+    <div class="row justify-content-center flex-column flex-md-row">
+            <div class="col-10 offset-1 col-md-5 offset-md-0 mt-2 py-3 bg-gradient rounded border border-secondary border-opacity-50 bg-color">
                 <h4>Route:</h4>
                 <pre>{{ post.route }}</pre>
             </div>
-        </div>
-        <div class="col-6">
-            <div class="p-3 border bg-light">
+            <div class="col-10 offset-1 col-md-5 offset-md-0 mt-2 py-3 bg-gradient rounded border border-secondary border-opacity-50 bg-color">
                 <h4>Accommodation:</h4>
                 <pre>{{ post.accommodation }}</pre>
             </div>
-        </div>
-        <div class="col-6">
-            <div class="p-3 border bg-light">
+    </div>
+    <div class="row justify-content-center flex-column flex-md-row">
+            <div class="col-10 offset-1 col-md-5 offset-md-0 mt-2 py-3 bg-gradient rounded border border-secondary border-opacity-50 bg-color">
                 <h4>Guide:</h4>
                 <pre>{{ post.guide }}</pre>
             </div>
-        </div>
-        <div class="col-6">
-            <div class="p-3 border bg-light">
+            <div class="col-10 offset-1 col-md-5 offset-md-0 mt-2 py-3 bg-gradient rounded border border-secondary border-opacity-50 bg-color">
                 <h4>Informations:</h4>
                 <pre>{{ post.additional_info }}</pre>
             </div>
-        </div>
     </div>
 </div>
 
@@ -100,7 +94,7 @@
         </div>
     </div>
     <div class="row justify-content-center flex-column flex-md-row">
-        <div class="col-md-7 card mb-4  mt-3 ">
+        <div class="col-md-7 card mb-4  mt-3 bg-color">
             {% if comments %}
             <div class="card-body">
                 <h3>Comments:</h3>

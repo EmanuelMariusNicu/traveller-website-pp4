@@ -204,7 +204,11 @@ body {
     color: #E84610;
     border: none;
     background: transparent;
+    font-size: 15px;
     
+}
+.fa-comments {
+    font-size: 15px;
 }
 
 .btn-like:hover,
@@ -214,7 +218,8 @@ body {
     border: none;
 }
 footer {
-    background-color: #76abc4;
+    background-color: #c1dbcf;
+    
     font-size: large;
     color:#1e23a8;
 
@@ -227,5 +232,12 @@ footer {
 }
 
 .bg-color {
-    background-color: #23BBBB;
+    background-color:  #c1dbcf;
+}
+h4 {
+    font-size: large;
+}
+pre {
+    font-size: medium;
+    color:#636742
 }
