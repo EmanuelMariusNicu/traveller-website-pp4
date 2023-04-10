@@ -15,7 +15,7 @@
             <div class="d-none d-md-block col-md-8 masthead-image">
                 <!-- The featured image URL goes in the src attribute -->
                 {% if "placeholder" in post.featured_image.url %}
-                <img src="/static/images/travel.jpg" width="100%">
+                <img src="/static/images/travel.jpg" alt="Plane in the sky" width="100%">
                 {% else %}
                 <img src=" {{ post.featured_image.url }}" width="100%">
                 {% endif %}
@@ -23,30 +23,36 @@
         </div>
     </div>
 </div>
-<div class="row justify-content-center flex-column flex-md-row">
-    <div
-        class="col-10 offset-1 col-md-5 offset-md-0 mt-2 py-3 bg-white bg-gradient rounded border border-secondary border-opacity-50">
-        <h4>Route:</h4>
-        <pre>{{ post.route }}</pre>
-    </div>
-    <div
-        class="col-10 offset-1 col-md-5 offset-md-0 mt-2 py-3 bg-white bg-gradient rounded border border-secondary border-opacity-50">
-        <h4>Accommodation:</h4>
-        <pre>{{ post.accommodation }}</pre>
+
+<div class="container">
+    <div class="row g-2 ">
+        <div class="col-6">
+            <div class="p-3 border bg-light">
+                <h4>Route:</h4>
+                <pre>{{ post.route }}</pre>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="p-3 border bg-light">
+                <h4>Accommodation:</h4>
+                <pre>{{ post.accommodation }}</pre>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="p-3 border bg-light">
+                <h4>Guide:</h4>
+                <pre>{{ post.guide }}</pre>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="p-3 border bg-light">
+                <h4>Informations:</h4>
+                <pre>{{ post.additional_info }}</pre>
+            </div>
+        </div>
     </div>
 </div>
-<div class="row justify-content-center flex-column flex-md-row">
-    <div
-        class="col-10 offset-1 col-md-5 offset-md-0 mt-2 py-3 bg-white bg-gradient rounded border border-secondary border-opacity-50">
-        <h4>Guide:</h4>
-        <pre>{{ post.guide }}</pre>
-    </div>
-    <div
-        class="col-10 offset-1 col-md-5 offset-md-0 mt-2 py-3 bg-white bg-gradient rounded border border-secondary border-opacity-50">
-        <h4>Aditional Info:</h4>
-        <pre>{{ post.additional_info }}</pre>
-    </div>
-</div>
+
 
 
     <div class="row justify-content-center flex-column flex-md-row">

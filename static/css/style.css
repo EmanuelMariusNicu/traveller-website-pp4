@@ -225,3 +225,7 @@ footer {
 .btn-floating:hover {
     color: #a8b218;
 }
+
+.bg-color {
+    background-color: #23BBBB;
+}
