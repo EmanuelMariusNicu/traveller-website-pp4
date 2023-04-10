@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@200&family=Major+Mono+Display&family=Rajdhani:wght@300&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
 body {
-    font-family: 'Arima Madurai', sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
 
 .container-fluid {
     background-color: #c1dbcf;
+    border: 1px solid rgb(31, 61, 66);
     
     
 }
@@ -15,7 +16,7 @@ body {
     
     padding-top: 0;
     padding-bottom: 0;
-
+    
 }
 #navbarText {
     font-size:medium;
@@ -38,9 +39,9 @@ body {
              1px 3px 1px #7183a6,
              
              1px 10px 5px rgba(231, 216, 216, 0.5),
-             1px 15px 10px rgba(214, 206, 206, 0.4),
-             
-             
+             1px 15px 10px rgba(214, 206, 206, 0.4);
+     
+           
 
 }
 .navbar-text {
@@ -139,9 +140,23 @@ body {
     text-decoration: none;
     color: #445261;
 }
-.nav-link {
+.nav-link:hover {
     font-size: large;
-    color: #E84610;
+    border-top: 2px solid rgb(120, 197, 222);
+    border-bottom: 2px solid rgb(120, 197, 222);
+    padding: 4px 0;
+}
+.nav-link:a {
+    transition: 1s ease;
+    background: #3fa46a;
+    color: rgb(115, 154, 44);
+    font-size: 20px;
+    text-decoration: none;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    padding: 20px 0;
+    margin: 0 5px;
+    font-size: 17px;
 }
 
 .post-link:hover,
@@ -171,7 +186,7 @@ body {
 .btn-signup:hover,
 .btn-signup:active {
     background-color: #fff;
-    color: #23BBBB;
+    color: #acbb23;
 }
 
 .link {
@@ -189,6 +204,7 @@ body {
     color: #E84610;
     border: none;
     background: transparent;
+    
 }
 
 .btn-like:hover,
@@ -198,7 +214,8 @@ body {
     border: none;
 }
 footer {
-    background-color: #c6e3e3;
+    background-color: #76abc4;
     font-size: large;
+    
 
 }
