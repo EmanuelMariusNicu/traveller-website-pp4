@@ -32,3 +32,38 @@
     - [Content](https://github.com/EmanuelMariusNicu/traveller-website-pp4/blob/main/README.md#content)
     - [Media](https://github.com/EmanuelMariusNicu/traveller-website-pp4/blob/main/README.md#media)
     - [Acknowledgemnets](https://github.com/EmanuelMariusNicu/traveller-website-pp4/blob/main/README.md#acknowledgements)
+    
+## Strategy
+
+### Target Audience
+- This site is targeted towards anyone who enjoys traveling - beginner or advanced - who would like to either share their own trips with others or search for some new ones to try.
+
+- View [User Personas](documents/personas.pdf)
+
+### User Stories
+
+#### Admin
+*These are staff/admin users who maintain the site and manage it's contents.*
+- [#1](https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As an admin, I can edit and remove trips so that I can manage the site contents.
+- [#2](https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As an admin, I can read and remove comments so that inappropriate comments can be removed.
+
+#### Trip Sharers
+*These are users who intend to share recipes on the platform.*
+- [#3](https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As a trip sharer, I can post my own trips so that I can share them with others.
+- [#4](https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As a trip sharer, I can set my posted trips to private or public so that I can control who views them.
+- [#5](https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As a trip sharer, I can edit my posted trips so that I can update any mistakes/changes.
+- [#6](https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As a **user**, I can create an account so that I can interact with other users content and create my own.
+- [#12](https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As a trip sharer, I can add tags to my recipes so that they are more visible to others.
+
+#### Trips Viewers
+*These are users who intend to view trips that others have posted.*
+- [#6](https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As a **user**, I can create an account so that I can interact with other users content and create my own.
+- [#9](https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As a trip viewer, I can like and comment on other's trips so that I can share my opinion.
+- [#10](https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As a trip viewer, I can search for trips so that I can find one that matches what I'm looking for.
+- [#13](https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As a trip viewer, I can view the budget information of a trip so that I can make an informed decision based on my possibilities.
+- [#14](https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As a trip viewer, I can view the recipe difficulty so that I can select a recipe which would suit my skill set.
+- [#15](https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As a trip viewer, I can view the time requirements for the trips so that I can select a trip based on the time it takes.
+
+
+---
+## Scope
