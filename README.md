@@ -98,7 +98,7 @@
 - The home page displays 1 row with trip cards.
 - All pages are responsive thanks to bootstrap classes.
 - Browsing/search results pages present the related trips in a large flex container.
-- Profile pages can be viewed by either clicking the author/username at the top of the recipe detail page or selecting Dashboard from the Profile dropdown menu in the navbar (this will show your own profile if logged in).
+- 
 
 ### Data model
 
