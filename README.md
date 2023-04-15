@@ -67,3 +67,23 @@
 
 ---
 ## Scope
+### Research
+- Before any planning, I conducted research into both social media and trip/blog websites and took note of the conventional layouts and formats as well as which features I thought enhanced the user's experience and would be good to include for my target audience(s).
+
+### Future Features
+
+#### User post a trip
+- In the future, I'd like to give the users possibility to post their own trips.
+
+#### Difficulty
+- Either inputted by the poster at time of creation, the trip could be assigned a difficulty (beginner, intermediate or pro) so that user's can select based on their current abilities.
+
+#### Time Requirements
+- Similarly to difficulty, the time requirememnts could be added to the trip so that users can select based on their available time.
+ 
+
+### Testing
+- Throughout the project, I relied heavily on [Chrome Devtools](https://developer.chrome.com/docs/devtools/) to help me view this project on different screen sizes so that I could adjust elements, create media queries (by adding bootstrap classes) for responsive design.
+- Code was also run through validators and automatic tests were run.
+
+---
