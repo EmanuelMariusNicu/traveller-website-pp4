@@ -87,3 +87,21 @@
 - Code was also run through validators and automatic tests were run.
 
 ---
+## Structure
+
+### Wireframes
+
+### Information architecture
+- TravellerWorld is a blog-style site with multiple pages which relies on the MVC framework: Django to present information from a trip database and provide CRUD functionality.
+- Trips are presented as cards whilst browsing and full page views when viewing. the cards link to the trip viewer.
+- Trips can be browsed using words within the post or searching in the search bar in the top right of the navbar.
+- The home page displays 1 row with trip cards.
+- All pages are responsive thanks to bootstrap classes.
+- Browsing/search results pages present the related trips in a large flex container.
+- Profile pages can be viewed by either clicking the author/username at the top of the recipe detail page or selecting Dashboard from the Profile dropdown menu in the navbar (this will show your own profile if logged in).
+
+### Data model
+
+
+
+---
