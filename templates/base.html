@@ -38,6 +38,23 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Browse <i class="fa-solid fa-book-open"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- Dropdown nav menu to browse trips by tag/criteria -->
+                            <li><a class="dropdown-item" href="{% url 'browse' 'new'  %}">New</a></li>
+                            <li><a class="dropdown-item" href="{% url 'browse' 'popular'  %}">Popular</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            {% for tag in tags %}
+                            <li><a class="dropdown-item" href="{% url 'browse' tag|slugify  %}">{{ tag }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>

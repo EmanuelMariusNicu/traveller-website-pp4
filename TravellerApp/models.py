@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from utils.constants import TAGS
 
 
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -25,6 +26,7 @@ class Trip(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
         User, related_name='trip_like', blank=True)
+    tags = models.CharField(max_length=200, blank=True)
 
     class Meta:
         ordering = ["-created_on"]
@@ -34,6 +36,9 @@ class Trip(models.Model):
 
     def number_of_likes(self):
         return self.likes.count()
+    
+    def list_of_tags(self):
+        return self.tags.translate({ord(i): None for i in "]['"}).split(',')
 
 
 class Comment(models.Model):

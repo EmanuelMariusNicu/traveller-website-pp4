@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+    <!-- Heading and info (dynamic) -->
+    <div class="row text-center mt-5">
+        <h2 class="fs-1">Browse for: {{ tag }}</h2>
+    </div>
+    <div
+        class="row mt-4 py-4 justify-content-center flex-wrap bg-container bg-gradient rounded border border-warning border-opacity-50">
+        {% if trips %}
+        <!-- Displays trips whose tags contain the queried tag for the user to browse -->
+        {% for trip in trips %}
+        {% include "search_card.html" with trip=trip %}
+        {% endfor %}
+        {% else %}
+        <div class="text-center">
+            <p>Oh no! No {{ tag }} trips yet!</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Other options (fixed) -->
+    <div class="row text-center">
+        <div class="col-sm-10 offset-sm-1 mt-5">
+            <h4>Can't find what you're looking for?</h4>
+            <p>You could try searching key words or check another tag!
+            </p>
+            <!-- Search -->
+            <form class="d-flex" role="search" method="POST" action="{% url 'search_results' %}">
+                {% csrf_token %}
+                <input class="form-control me-2" type="search" placeholder="Search trips" name="search-bar"
+                    aria-label="Input search">
+                <button class="btn btn-light fw-bold text-dark btn-outline-secondary" type="submit"
+                    aria-label="Search"><i class="fa fa-search" ></i></button>
+            </form>
+            <!-- Browse by tag -->
+            <h4 class="mt-4">Browse by tag</h4>
+            <ul class="list-inline">
+                {% for tag in tags %}
+                <li class="list-inline-item"><a class="btn btn-light bg-highlight"
+                        href="{% url 'browse' tag|slugify  %}">{{ tag }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

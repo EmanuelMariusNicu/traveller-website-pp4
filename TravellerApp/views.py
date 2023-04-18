@@ -3,7 +3,8 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Trip
 from .forms import CommentForm
-from django.db.models import Q
+from django.db.models import Q, Count
+from utils.constants import TAGS
 # Create your views here.
 
 
@@ -34,7 +35,7 @@ class TripDetail(View):
                 "comment_form": CommentForm(),
             },
         )
-    
+   
     def post(self, request, slug, *args, **kwargs):
 
         queryset = Trip.objects.filter(status=1)
@@ -83,7 +84,7 @@ class SearchResults(View):
     Custom view for displaying search results. Checks if the inputted string
     appears in our trips.
     """
-    # Tutorial to retrieve search term available at
+    # Guided to retrieve search term
     # https://www.youtube.com/watch?v=AGtae4L5BbI
     def post(self, request, *args, **kwargs):
         searched = request.POST['search-bar']
@@ -102,6 +103,45 @@ class SearchResults(View):
 
     def get(self, request, *args, **kwargs):
         return render(request, 'search_results.html')
+
+
+class BrowseByTag(View):
+    """
+    Custom view to display trips matching the selected tag. Tags are accessed
+    via a tuple of tuples called TAGS
+    tag: str, the tag name, as it appears to the user
+    slug: str, slugified version of the selected tag
+    """
+    def get(self, request, slug, *args, **kwargs):
+        if slug == 'new':
+            trips = Trip.objects.filter(status=1)\
+                .order_by('-created_on')
+            tag = 'New'
+        elif slug == 'popular':
+            # Order by count of ManyToMany field from
+            # https://stackoverflow.com/questions/28254142/django-order-by-count-of-many-to-many-object
+            trips = Trip.objects.filter(status=1)\
+                .annotate(q_count=Count('likes')).order_by('-q_count')
+            tag = 'Popular'
+        else:
+            for tuple in TAGS:
+                if slug in tuple:
+                    tag = tuple[0]
+
+            trips = Trip.objects.filter(
+                status=1,
+                tags__contains=tag
+                )
+
+        return render(
+            request,
+            'browse.html',
+            {
+                'trips': trips,
+                'tag': tag,
+                'slug': slug,
+            },
+        )
 
 
 def error_404_view(request, exception):
