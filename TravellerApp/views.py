@@ -2,9 +2,11 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Trip
-from .forms import CommentForm
+from .forms import CommentForm, TripForm
 from django.db.models import Q, Count
 from utils.constants import TAGS
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 
@@ -84,8 +86,7 @@ class SearchResults(View):
     Custom view for displaying search results. Checks if the inputted string
     appears in our trips.
     """
-    # Guided to retrieve search term
-    # https://www.youtube.com/watch?v=AGtae4L5BbI
+   
     def post(self, request, *args, **kwargs):
         searched = request.POST['search-bar']
         trips = Trip.objects.filter(
@@ -118,8 +119,6 @@ class BrowseByTag(View):
                 .order_by('-created_on')
             tag = 'New'
         elif slug == 'popular':
-            # Order by count of ManyToMany field from
-            # https://stackoverflow.com/questions/28254142/django-order-by-count-of-many-to-many-object
             trips = Trip.objects.filter(status=1)\
                 .annotate(q_count=Count('likes')).order_by('-q_count')
             tag = 'Popular'
@@ -158,3 +157,49 @@ def error_500_view(request):
     Inspired by https://www.geeksforgeeks.org/django-creating-a-404-error-page/
     """
     return render(request, '500.html')
+
+
+class AddTrip(LoginRequiredMixin, View):
+    """
+    View to host form for users to post a new trip.
+    Login required
+    trip_form: form, creates new object in Trip model once submitted
+    """
+    def get(self, request, *args, **kwargs):
+
+        return render(
+            request,
+            'add_trip.html',
+            {'trip_form': TripForm()}
+            )
+
+    def post(self, request, *args, **kwargs):
+        trip_form = TripForm(request.POST, request.FILES)
+
+        if trip_form.is_valid():
+            trip_form.instance.author = request.user
+            # Idea for holding temporary data to clean
+            # https://www.geeksforgeeks.org/multiplechoicefield-django-forms/
+            temp = trip_form.cleaned_data.get('tags')
+            trip = trip_form.save(commit=False)
+            trip.tags = temp
+            trip_form.save()
+
+            slug = trip_form.instance.slug
+
+            return redirect(reverse("post_detail", kwargs={"slug": slug}))
+        else:
+            data = {
+                'title': trip_form.instance.title,
+                'caption': recipe_form.instance.caption,
+                'featured_image': recipe_form.instance.image,
+                'ingredients': recipe_form.instance.ingredients,
+                'steps': recipe_form.instance.steps,
+                }
+            # https://docs.djangoproject.com/en/dev/ref/forms/api/#dynamic-initial-values
+            # https://www.reddit.com/r/django/comments/4oie1d/how_to_automatically_prepopulate_data_in_forms/
+            return render(
+                request,
+                'add_trip.html',
+                {'trip_form': TripForm(data)}
+                )

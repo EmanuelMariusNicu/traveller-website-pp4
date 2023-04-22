@@ -21,29 +21,22 @@ body {
 #navbarText {
     font-size:medium;
     
+    
 
 }
 .navbar-brand {
-    color: #ebf0f0;
-    text-shadow: 1px 1px 1px #0c357d,
-             1px 2px 1px #3672e1,
+    color: #82d2d2;
+}
+.nav-item  {
+    text-shadow: 1px 1px 1px #5a7198,
+             1px 2px 1px #9599a0,
              
             
              1px 15px 10px rgba(115, 208, 208, 0.4),
-             1px 20px 30px rgba(25, 97, 133, 0.3),
-             1px 25px 50px rgba(51, 34, 167, 0.896);
+             1px 20px 30px rgba(133, 166, 182, 0.607),
+             1px 25px 50px rgba(83, 66, 191, 0.896);
 }
-.nav-item {
-    text-shadow: 1px 1px 1px #949ba7,
-             1px 2px 1px #6683b8,
-             1px 3px 1px #7183a6,
-             
-             1px 10px 5px rgba(231, 216, 216, 0.5),
-             1px 15px 10px rgba(214, 206, 206, 0.4);
-     
-           
 
-}
 .navbar-text {
     margin-right: 20px;
     color: #7cd868;

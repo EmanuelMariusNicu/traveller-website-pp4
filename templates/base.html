@@ -55,20 +55,26 @@
                             {% endfor %}
                         </ul>
                     </li>
-                    {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Menu</i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- Dropdown nav menu for login-required content (dynamic) -->
+                            {% if user.is_authenticated %}
+                            <li class="dropdown-header"><strong>Hello,traveller!</strong></li>
+                            <li><a class="dropdown-item" href="{% url 'add_trip' %}">Post your</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+                            {% else %}
+                            <li><a class="dropdown-item" href="{% url 'account_login' %}">Login</a></li>
+                            <li><a class="dropdown-item" href="{% url 'account_signup' %}">Register</a></li>
+                            {%  endif %}
+                        </ul>
                     </li>
-                    {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-                        
-                    </li>
-                    {% endif %}
-
                 </ul>
                 <span class="navbar-text text-muted">
                     Memoires of a traveller
