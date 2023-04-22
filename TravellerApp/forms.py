@@ -16,7 +16,6 @@ class TripForm(forms.ModelForm):
         model = Trip
         fields = (
             'title',
-            'author',
             'featured_image',
             'budget',
             'route',
@@ -24,7 +23,7 @@ class TripForm(forms.ModelForm):
             'guide',
             'additional_info',
         )
-    
+
 
 class CommentForm(forms.ModelForm):
     """
@@ -41,4 +40,3 @@ class CommentForm(forms.ModelForm):
         widgets = {
           'body': forms.Textarea(attrs={'rows': 2, 'cols': 15}),
         }
-

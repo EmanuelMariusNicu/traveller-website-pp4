@@ -97,6 +97,43 @@
             </div>
         </div>
     </div>
+    <!-- Edit & delete buttons -->
+    {% if user == post.author %}
+    <div class="row mt-3 justify-content-around">
+        <div class="col-12 d-flex">
+            <a href="{% url 'edit_trip' post.slug %}" class="btn btn-warning flex-grow-1">Edit</a>
+            <button type="button" class="btn btn-danger mx-2 flex-grow-1" data-bs-toggle="modal"
+                data-bs-target="#recipeDeletionModal">
+                Delete
+            </button>
+
+            <!-- Modal to confirm deletion of trip-->
+            <div class="modal fade" id="recipeDeletionModal" tabindex="-1"
+                aria-labelledby="recipeDeletionModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="recipeDeletionModalLabel">Delete Recipe</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to delete this post? <strong>This is
+                                permanent</strong>
+                            <p>{{ post.title }}</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary"
+                                data-bs-dismiss="modal">Close</button>
+                            <a class="btn btn-danger"
+                                href="{% url 'delete_trip' post.slug %}">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
     <div class="row">
         <div class="col">
             <hr>

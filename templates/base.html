@@ -43,7 +43,7 @@
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Browse </i>
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu menu-color">
                             <!-- Dropdown nav menu to browse trips by tag/criteria -->
                             <li><a class="dropdown-item" href="{% url 'browse' 'new'  %}">New</a></li>
                             <li><a class="dropdown-item" href="{% url 'browse' 'popular'  %}">Popular</a></li>
@@ -55,16 +55,16 @@
                             {% endfor %}
                         </ul>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown menu-font">
                         <a class="nav-link dropdown-toggle" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Menu</i>
                         </a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu menu-color">
                             <!-- Dropdown nav menu for login-required content (dynamic) -->
                             {% if user.is_authenticated %}
-                            <li class="dropdown-header"><strong>Hello,traveller!</strong></li>
-                            <li><a class="dropdown-item" href="{% url 'add_trip' %}">Post your</a></li>
+                            <li class="dropdown-header"><strong class="menu">Hello,traveller!</strong></li>
+                            <li><a class="dropdown-item post-trip" href="{% url 'add_trip' %}">Post your trip!</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>

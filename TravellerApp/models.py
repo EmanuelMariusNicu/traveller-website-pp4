@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from utils.constants import TAGS
+from django.template.defaultfilters import slugify
 
 
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -23,7 +24,7 @@ class Trip(models.Model):
     accommodation = models.TextField()
     guide = models.TextField(blank=True)
     additional_info = models.TextField(blank=True)
-    status = models.IntegerField(choices=STATUS, default=0)
+    status = models.IntegerField(choices=STATUS, default=1)
     likes = models.ManyToManyField(
         User, related_name='trip_like', blank=True)
     tags = models.CharField(max_length=200, blank=True)
@@ -36,9 +37,13 @@ class Trip(models.Model):
 
     def number_of_likes(self):
         return self.likes.count()
-    
+
     def list_of_tags(self):
         return self.tags.translate({ord(i): None for i in "]['"}).split(',')
+    
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super(Trip, self).save(*args, **kwargs)
 
 
 class Comment(models.Model):

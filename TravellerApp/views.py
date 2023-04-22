@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Trip
@@ -7,7 +7,6 @@ from django.db.models import Q, Count
 from utils.constants import TAGS
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
-# Create your views here.
 
 
 class TripList(generic.ListView):
@@ -37,7 +36,7 @@ class TripDetail(View):
                 "comment_form": CommentForm(),
             },
         )
-   
+
     def post(self, request, slug, *args, **kwargs):
 
         queryset = Trip.objects.filter(status=1)
@@ -86,7 +85,7 @@ class SearchResults(View):
     Custom view for displaying search results. Checks if the inputted string
     appears in our trips.
     """
-   
+
     def post(self, request, *args, **kwargs):
         searched = request.POST['search-bar']
         trips = Trip.objects.filter(
@@ -178,8 +177,6 @@ class AddTrip(LoginRequiredMixin, View):
 
         if trip_form.is_valid():
             trip_form.instance.author = request.user
-            # Idea for holding temporary data to clean
-            # https://www.geeksforgeeks.org/multiplechoicefield-django-forms/
             temp = trip_form.cleaned_data.get('tags')
             trip = trip_form.save(commit=False)
             trip.tags = temp
@@ -191,10 +188,15 @@ class AddTrip(LoginRequiredMixin, View):
         else:
             data = {
                 'title': trip_form.instance.title,
-                'caption': recipe_form.instance.caption,
-                'featured_image': recipe_form.instance.image,
-                'ingredients': recipe_form.instance.ingredients,
-                'steps': recipe_form.instance.steps,
+                'slug': trip_form.instance.slug,
+                'featured_image': trip_form.instance.featured_image,
+                'content': trip_form.instance.content,
+                'budget': trip_form.instance.budget,
+                'route': trip_form.instance.route,
+                'accommodation': trip_form.instance.accommodation,
+                'guide': trip_form.instance.guide,
+                'additional_info': trip_form.instance.additional_info,
+                'tags': trip_form.instance.tags,
                 }
             # https://docs.djangoproject.com/en/dev/ref/forms/api/#dynamic-initial-values
             # https://www.reddit.com/r/django/comments/4oie1d/how_to_automatically_prepopulate_data_in_forms/
@@ -203,3 +205,101 @@ class AddTrip(LoginRequiredMixin, View):
                 'add_trip.html',
                 {'trip_form': TripForm(data)}
                 )
+
+
+class EditTrip(LoginRequiredMixin, View):
+    """
+    View to host form for users to edit their existing trip posts.
+    Login required
+    trip_form: form, updates instance of trip in model
+    once submitted
+    trip: object, trip to edit
+    """
+    def get(self, request, slug, *args, **kwargs):
+        queryset = Trip.objects.filter(status=1)
+        trip = get_object_or_404(queryset, slug=slug)
+
+        trip_form = TripForm(
+            instance=trip,
+            initial={'tags': trip.list_of_tags}
+            )
+
+        return render(
+            request,
+            'edit_trip.html',
+            {
+                'trip_form': trip_form,
+                'trip': trip
+            })
+
+    def post(self, request, slug, *args, **kwargs):
+        queryset = Trip.objects.filter(status=1)
+        trip = get_object_or_404(queryset, slug=slug)
+
+        trip_form = TripForm(
+            request.POST,
+            request.FILES,
+            instance=trip
+            )
+
+        if trip_form.is_valid():
+            temp = trip_form.cleaned_data.get('tags')
+            trip = trip_form.save(commit=False)
+            trip.updated_on = datetime.now()
+            trip.tags = temp
+            updated_trip = trip_form.save()
+
+            slug = updated_trip.slug
+
+            return redirect(reverse("post_detail", kwargs={"slug": slug}))
+        else:
+            data = {
+                'title': trip_form.instance.title,
+                'author': trip_form.instance.author,
+                'featured_image': trip_form.instance.featured_image,
+                'content': trip_form.instance.content,
+                'budget': trip_form.instance.budget,
+                'route': trip_form.instance.route,
+                'accommodation': trip_form.instance.accommodation,
+                'guide': trip_form.instance.guide,
+                'additional_info': trip_form.instance.additional_info,
+                'tags': trip_form.instance.tags,
+                }
+            # https://docs.djangoproject.com/en/dev/ref/forms/api/#dynamic-initial-values
+            # https://www.reddit.com/r/django/comments/4oie1d/how_to_automatically_prepopulate_data_in_forms/
+            return render(
+                request,
+                'edit_trip.html',
+                {
+                    'trip_form': TripForm(data),
+                    'trip': trip
+                    }
+                )
+
+
+@login_required
+def delete_comment(request, comment_id):
+    """
+    Deletes user's comment from the Comment data model when url called.
+    Login required
+    """
+    comment = get_object_or_404(Comment, id=comment_id)
+    if request.user == comment.commenter:
+        comment.delete()
+
+    # Return to previous page from
+    # https://stackoverflow.com/questions/50006147/how-to-return-redirect-to-previous-page-in-django-after-post-request
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
+
+@login_required
+def delete_trip(request, slug):
+    """
+    Deletes trip from the Trip data model when url called.
+    Login required
+    """
+    trip = get_object_or_404(Trip, slug=slug)
+    if request.user == trip.author:
+        trip.delete()
+
+    return redirect('/')

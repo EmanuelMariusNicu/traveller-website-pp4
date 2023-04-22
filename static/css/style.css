@@ -36,6 +36,17 @@ body {
              1px 20px 30px rgba(183, 209, 223, 0.607),
              1px 25px 50px rgba(138, 130, 190, 0.896);
 }
+.menu {
+    color:#e2cd2d;
+}
+
+
+.menu-color {
+    background-color:#c1dbcf;
+}
+.post-trip {
+    color:#e2cd2d
+}
 
 .navbar-text {
     margin-right: 20px;

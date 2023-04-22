@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import Trip, Comment
 from django_summernote.admin import SummernoteModelAdmin
-# Register your models here.
+
 
 @admin.register(Trip)
 class TripAdmin(SummernoteModelAdmin):
@@ -10,6 +10,7 @@ class TripAdmin(SummernoteModelAdmin):
     summernote_fields = 'content'
     list_display = ('title', 'slug', 'status', 'created_on')
     search_fields = ['title', 'content']
+
 
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):

@@ -7,7 +7,7 @@
     <div class="row">
         <!-- User must be logged in -->
         {% if user.is_authenticated %}
-        <h2 class="fs-1 text-center mt-5">Post yours</h2>
+        <h2 class="fs-1 text-center mt-5">Post your trip</h2>
         <form method="POST" class="col-10 offset-1 col-lg-6 offset-lg-3" enctype="multipart/form-data">
             {{ trip_form | crispy }}
             {% csrf_token %}
