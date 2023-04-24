@@ -159,10 +159,9 @@
                     <!-- The body of the comment goes before the | -->
                     {{ comment.body | linebreaks }}
                 </div>
-                <div class="card-body">
                 <!-- Display comments -->
                     
-                    {% if user == comment.commenter %}
+                    {% if user.email == comment.email %}
                     <button type="button" class="btn btn-danger btn-sm rounded" data-bs-toggle="modal"
                         data-bs-target="#commentDeletionModal">
                         Delete
@@ -189,7 +188,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
                 {% endif %}
                 <!-- Our for loop ends here -->
                 {% endfor %}

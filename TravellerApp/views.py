@@ -257,7 +257,7 @@ class EditTrip(LoginRequiredMixin, View):
         if trip_form.is_valid():
             temp = trip_form.cleaned_data.get('tags')
             trip = trip_form.save(commit=False)
-            trip.updated_on = datetime.now()
+            # trip.updated_on = datetime.now()
             trip.tags = temp
             updated_trip = trip_form.save()
 
