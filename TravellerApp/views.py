@@ -17,7 +17,14 @@ class TripList(generic.ListView):
 
 
 class TripDetail(View):
-
+    """
+    Custom view to display full recipe detail
+    trip: object, object from Trip model matching the requested slug
+    comments: queryset, items from Comment model with matching trip
+    foreign key
+    comment_form: form, form for users to add comments to Comment model
+    liked: boolean, True if user has like recipe
+    """
     def get(self, request, slug, *args, **kwargs):
         queryset = Trip.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
@@ -70,6 +77,11 @@ class TripDetail(View):
 
 
 class TripLike(View):
+    """
+    Toggles like status on submission of like form/button on trip page.
+    Also sends notification to trip author
+    Login required
+    """
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Trip, slug=slug)
         if post.likes.filter(id=request.user.id).exists():

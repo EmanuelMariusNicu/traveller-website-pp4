@@ -9,6 +9,9 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Trip(models.Model):
+    """
+    Model to store user-submitted trips
+    """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     author = models.ForeignKey(
@@ -47,6 +50,9 @@ class Trip(models.Model):
 
 
 class Comment(models.Model):
+    """
+    Model stores comments and links to trip via foreign key
+    """
     post = models.ForeignKey(Trip, on_delete=models.CASCADE,
                              related_name="comments")
     name = models.CharField(max_length=80)

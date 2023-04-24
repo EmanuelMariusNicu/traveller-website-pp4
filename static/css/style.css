@@ -1,17 +1,18 @@
+/* Fonts links */
 @import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@200&family=Major+Mono+Display&family=Rajdhani:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-
+/* Body */
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
+/* Navbar color */
 .container-fluid {
     background-color: #c1dbcf;
     border: 1px solid rgb(31, 61, 66);
     
     
 }
-
+/* Navbar */
 #navbar { 
     
     padding-top: 0;
@@ -27,6 +28,7 @@ body {
 .navbar-brand {
     color: #82d2d2;
 }
+/* Menu*/
 .nav-item  {
     text-shadow: 1px 1px 1px #7992bd,
              1px 2px 1px #9599a0,
@@ -167,7 +169,7 @@ body {
 .page-link {
     color: #1080e8;
 }
-
+/* Post model */
 .post-title {
     margin-top: 10%;
     margin-left: 5%;
@@ -221,6 +223,7 @@ body {
     background: transparent;
     border: none;
 }
+/* Footer */
 footer {
     background-color: #c1dbcf;
     
