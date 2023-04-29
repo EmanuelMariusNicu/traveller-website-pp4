@@ -152,7 +152,7 @@ body {
     border-bottom: 2px solid rgb(120, 197, 222);
     padding: 4px 0;
 }
-.nav-link:a {
+.nav-link:active {
     transition: 1s ease;
     background: #3fa46a;
     color: rgb(115, 154, 44);
