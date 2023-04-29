@@ -7,7 +7,7 @@
 
 ## Links
 
-[Link to the live project hosted on Heroku (right click to open in new tab)]
+[Link to the live project hosted on Heroku (https://traveller-app.herokuapp.com/)]
 
 [[Link to the project repository hosted on Github](https://github.com/EmanuelMariusNicu/traveller-website-pp4)]
 
