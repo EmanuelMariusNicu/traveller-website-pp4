@@ -1,8 +1,9 @@
 # TravellerWorld Website
 
-![The TravellerWorld website displayed on different devices]
+![The TravellerWorld website displayed on different devices](https://user-images.githubusercontent.com/108750655/235296713-5acfe2ac-424b-4773-8fa1-98b0097b1423.png)
 
-- TravellerWorld is a social trips blog which combines the functionality of social media with the practicality of a trips blog hosting site. Users can sign-up to share their own trips(future functionality),like other's, and interact with each other through commenting.   
+
+- TravellerWorld is a social trips blog which combines the functionality of social media with the practicality of a trips blog hosting site. Users can sign-up to share their own trip,like other's, and interact with each other through commenting.   
 
 ## Links
 
