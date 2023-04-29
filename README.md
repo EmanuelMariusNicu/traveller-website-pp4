@@ -144,21 +144,29 @@
 ##### Cards
 - Compact view of trip key features.
 - Displays trip image, title, caption, likes counter, comments counter and saves counter as well as a stretched link.
-- If recipe belongs to the user currently logged in, user can show the username on the card trip.
+- If trips belongs to the user currently logged in, user can show the username on the card trip.
 
 ![image](https://user-images.githubusercontent.com/108750655/234085440-5fa13a64-8727-4f78-957e-0c02451e42dc.png)
 
 ##### No results
-- Other options suggested if no results found
+- Suggested to search again if no results found
 
-![Other options](static/images/other-options.png)
+![image](https://user-images.githubusercontent.com/108750655/235295605-346652d0-add1-442a-841f-608f858ca793.png)
+
 
 #### Trip
-- Trip image, title, author, budget, created and modified dates and caption displayed in container at bottom.
-- Edit and delete buttons presented if viewed by owner. Like and comment available is visit by someone else.
+- Trip image, title, author, budget, tags, route, accommodation, guide, information, created and modified dates and caption displayed in container at bottom.
+- Edit and delete buttons presented if viewed by owner. Like and comment available if visit by someone else.
 - Route, accommodation, guide and informations  displayed in their own containers below
+
+![image](https://user-images.githubusercontent.com/108750655/235295753-26fa7dab-676f-40b8-b338-b82ef1fcf953.png)
+
+#### Post a comment
+-User or viewer can post a comment and delete it.
+![image](https://user-images.githubusercontent.com/108750655/235295768-da17bb59-57c5-4912-b3e1-56d04fb4b978.png)
 
 
 #### Post a Trip
 - Crispy form
-- Inputs: title, image select,budget, route, accommodation, guide and informations
+- Inputs: title, image select,budget, route, accommodation, guide and informations and tags
+![image](https://user-images.githubusercontent.com/108750655/235295817-baf96d2a-0600-430f-8674-1a4122f12b69.png)
