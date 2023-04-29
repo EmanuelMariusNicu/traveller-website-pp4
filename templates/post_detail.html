@@ -161,7 +161,7 @@
                 </div>
                 <!-- Display comments -->
                     
-                    {% if user.email == comment.email %}
+                    {% if user.username == comment.name %}
                     <button type="button" class="btn btn-danger btn-sm rounded" data-bs-toggle="modal"
                         data-bs-target="#commentDeletionModal">
                         Delete
