@@ -183,7 +183,7 @@
 #### Languages
 - [HTML](https://en.wikipedia.org/wiki/HTML)
 - [CSS](https://en.wikipedia.org/wiki/CSS)
-- [Git](https://en.wikipedia.org/wiki/Git) for version control
+- [Git](https://en.wikipedia.org/wiki/Git)
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
@@ -256,3 +256,28 @@
     5. Go to "Deploy" and connect Github repository
     6. Select "Enable Automatic Deploys" and click "Deploy Branch"
 
+## Credits
+
+### Content
+- [Code Institute lessons](https://codeinstitute.net/ie/)
+- Websites used for initial research:
+  - [Facebook](https://www.facebook.com/) for social features
+- Retrieving search term from search bar to display matches from [https://www.youtube.com/watch?v=AGtae4L5BbI](https://www.youtube.com/watch?v=AGtae4L5BbI)
+- Custom error pages from tutorial at [https://www.geeksforgeeks.org/django-creating-a-404-error-page/](https://www.geeksforgeeks.org/django-creating-a-404-error-page/)
+- Saving new slug when updating a trip at [https://stackoverflow.com/questions/33176569/slugfield-in-django-and-overriding-save](https://stackoverflow.com/questions/33176569/slugfield-in-django-and-overriding-save)
+- Lking posts as well as counting likes and saves inspired by [Code Institute](https://codeinstitute.net/) 'I Think Therefore I Blog' walkthrough project.
+- Code for multiple forms in one template from [https://openclassrooms.com/en/courses/7107341-intermediate-django/7264795-include-multiple-forms-on-a-page](https://openclassrooms.com/en/courses/7107341-intermediate-django/7264795-include-multiple-forms-on-a-page)
+- Idea for holding temporary data and cleaning before saving from [https://www.geeksforgeeks.org/multiplechoicefield-django-forms/](https://www.geeksforgeeks.org/multiplechoicefield-django-forms/)
+- Prepopulating form after failed attempt from [https://www.reddit.com/r/django/comments/4oie1d/how_to_automatically_prepopulate_data_in_forms/](https://www.reddit.com/r/django/comments/4oie1d/how_to_automatically_prepopulate_data_in_forms/) and [https://docs.djangoproject.com/en/dev/ref/forms/api/#dynamic-initial-values](https://docs.djangoproject.com/en/dev/ref/forms/api/#dynamic-initial-values)
+- Fixing mime-type bug in settings file from [https://stackoverflow.com/questions/35557129/css-not-loading-wrong-mime-type-django](https://stackoverflow.com/questions/35557129/css-not-loading-wrong-mime-type-django)
+
+
+### Media
+- All icons from [Font Awesome](https://fontawesome.com/)
+- All uploaded images from google(https://www.google.com/)
+
+### Acknowledgements
+- [Code Institute](https://codeinstitute.net/) for providing excellent learning content
+- [W3Schools](https://www.w3schools.com/) for quick and easy tutorials on programming languages
+- The users of [Stack Overflow](https://stackoverflow.com/)
+- Other CI students for sharing their work and providing inspiration and guidance through the Slack channels
