@@ -43,7 +43,7 @@ class Trip(models.Model):
 
     def list_of_tags(self):
         return self.tags.translate({ord(i): None for i in "]['"}).split(',')
-    
+
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
         super(Trip, self).save(*args, **kwargs)
@@ -60,14 +60,9 @@ class Comment(models.Model):
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
-    # commenter = models.ForeignKey(
-    #     User,
-    #     on_delete=models.CASCADE,
-    #     related_name='user_comments'
-    #     )
-     
+
     class Meta:
-        ordering = ["created_on"] 
+        ordering = ["created_on"]
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"

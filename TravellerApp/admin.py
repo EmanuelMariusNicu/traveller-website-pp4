@@ -18,7 +18,7 @@ class TripAdmin(SummernoteModelAdmin):
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
     """
-    Admin for Comment model 
+    Admin for Comment model
     """
     list_display = ('name', 'body', 'post', 'approved', 'created_on')
     list_filter = ('approved', 'created_on')
