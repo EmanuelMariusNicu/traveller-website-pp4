@@ -222,25 +222,22 @@
 
 #### Colour scheme
 
-![The colour scheme I used for the standard display](static/images/colour-scheme.png)
-
 - The colour-scheme is vibrant but soft to provide a pleasing display and compliment any trips images displayed on the site. The tone of the colours were chosen to compliment the bootstrap *light* and *secondary* classes as ashown above.
 - Bootstrap border and background colours were used on secondary features. Bootstrap button colours also used.
 
 #### Imagery
 - Images are uploaded by the users and stored in Cloudinary database.
-- There are placeholder images for both recipes and profiles if image field empty
-- Example recipes uploaded with images from Pexels
+- There are placeholder images for trips
+![image](https://user-images.githubusercontent.com/108750655/235296409-d2ff1665-a4a5-4dea-8030-28925c6dc9c0.png)
 
-![Placeholder for recipe image](static/images/recipe_placeholder.png)
-![Placeholder for profile image](static/images/profile_placeholder.png)
+
 
 #### Typography
-- All text is in the Quicksand font. It is a display sans serif with rounded terminals. It is designed for display purposes but kept legible enough to use in small sizes as well[*](https://fonts.google.com/specimen/Quicksand/about?query=quicksand). It pairs well with the softer colours and rounded corners of the design.
+- All text is readable. It is a display 'Lucida sans serif' with rounded terminals. It is designed for display purposes but kept legible enough to use in small sizes as well. It pairs well with the softer colours and rounded corners of the design.
 - Sans serif has been used as the fallback option since it is the closest web-safe font.
 
 #### Icons
-- [Font Awesome](https://fontawesome.com/) icons were used for navigation buttons as well as in creation of the placeholder images.
+- [Font Awesome](https://fontawesome.com/) icons were used for navigation buttons.
 
 ### Deployment
 - This site was developed using [Gitpod](https://www.gitpod.io/), stored on [Github](https://github.com/) and deployed with [Heroku](https://dashboard.heroku.com/apps).
