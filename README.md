@@ -134,21 +134,26 @@
 
 ![image](https://user-images.githubusercontent.com/108750655/234084420-a7813a61-901d-4f77-9885-59a571f9b445.png)
 
-#### Browse & Search
+#### Search bar
 - Displays all matching trips as cards in grid view.
 
 ![image](https://user-images.githubusercontent.com/108750655/234084779-cb156e97-6b6f-48bc-8d3f-c2518c5c6e3f.png)
 
 ![image](https://user-images.githubusercontent.com/108750655/234084888-4cae7185-9bd1-45cc-9eff-adfaa5b72b43.png)
+#### Browse by tag
 
-##### Cards
+- Displays all matching tags as cards in grid view
+![image](https://user-images.githubusercontent.com/108750655/235296102-9fdf1886-377f-4330-a3ff-7d446cbcaacd.png)
+
+
+#### Cards
 - Compact view of trip key features.
 - Displays trip image, title, caption, likes counter, comments counter and saves counter as well as a stretched link.
 - If trips belongs to the user currently logged in, user can show the username on the card trip.
 
 ![image](https://user-images.githubusercontent.com/108750655/234085440-5fa13a64-8727-4f78-957e-0c02451e42dc.png)
 
-##### No results
+#### No results
 - Suggested to search again if no results found
 
 ![image](https://user-images.githubusercontent.com/108750655/235295605-346652d0-add1-442a-841f-608f858ca793.png)
@@ -166,7 +171,90 @@
 ![image](https://user-images.githubusercontent.com/108750655/235295768-da17bb59-57c5-4912-b3e1-56d04fb4b978.png)
 
 
-#### Post a Trip
+#### Post a Trip/Edit a trip
 - Crispy form
 - Inputs: title, image select,budget, route, accommodation, guide and informations and tags
 ![image](https://user-images.githubusercontent.com/108750655/235295817-baf96d2a-0600-430f-8674-1a4122f12b69.png)
+
+
+### Technologies used
+
+#### Languages
+- [HTML](https://en.wikipedia.org/wiki/HTML)
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+- [Git](https://en.wikipedia.org/wiki/Git) for version control
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+#### Imported modules
+- [os](https://docs.python.org/3/library/os.html)
+
+#### Installed Libraries
+- [cloudinary](https://pypi.org/project/cloudinary/)
+- [dj3-cloudinary-storage](https://pypi.org/project/dj3-cloudinary-storage/)
+- [gunicorn](https://pypi.org/project/gunicorn/)
+- [oauthlib](https://pypi.org/project/oauthlib/)
+- [psycopg2](https://pypi.org/project/psycopg2/)
+- [whitenoise](https://pypi.org/project/whitenoise/)
+- [django-crispy-forms](https://pypi.org/project/django-crispy-forms/)
+
+#### Frameworks
+- [Django](https://www.djangoproject.com/)
+
+#### Other resources
+- [Gitpod](https://www.gitpod.io/) to alter and manage website files
+- [Github](https://github.com/) to create and store website files
+- [Heroku](https://dashboard.heroku.com/apps) to deploy web application
+- [Chrome Devtools](https://developer.chrome.com/docs/devtools/) to test site throughout process
+- [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/) to help with styling and responsive design
+- [Cloudinary](https://cloudinary.com/) for database and staic file storage
+- [Google Fonts](https://fonts.google.com/) for the website font
+- [Font Awesome](https://fontawesome.com/) used to add icons
+- [Favicon.io](https://favicon.io/favicon-generator/) used to create favicon
+- [Code Institute](https://codeinstitute.net/) fullstack developer course to provide learning materials
+- [W3Schools](https://www.w3schools.com/) for help with common coding issues
+- [Stack Overflow](https://stackoverflow.com/) for help with common coding issues
+- [Am I Responsive?](https://ui.dev/amiresponsive) for device simulations
+
+## Surface
+
+### Design
+
+#### Colour scheme
+
+![The colour scheme I used for the standard display](static/images/colour-scheme.png)
+
+- The colour-scheme is vibrant but soft to provide a pleasing display and compliment any trips images displayed on the site. The tone of the colours were chosen to compliment the bootstrap *light* and *secondary* classes as ashown above.
+- Bootstrap border and background colours were used on secondary features. Bootstrap button colours also used.
+
+#### Imagery
+- Images are uploaded by the users and stored in Cloudinary database.
+- There are placeholder images for both recipes and profiles if image field empty
+- Example recipes uploaded with images from Pexels
+
+![Placeholder for recipe image](static/images/recipe_placeholder.png)
+![Placeholder for profile image](static/images/profile_placeholder.png)
+
+#### Typography
+- All text is in the Quicksand font. It is a display sans serif with rounded terminals. It is designed for display purposes but kept legible enough to use in small sizes as well[*](https://fonts.google.com/specimen/Quicksand/about?query=quicksand). It pairs well with the softer colours and rounded corners of the design.
+- Sans serif has been used as the fallback option since it is the closest web-safe font.
+
+#### Icons
+- [Font Awesome](https://fontawesome.com/) icons were used for navigation buttons as well as in creation of the placeholder images.
+
+### Deployment
+- This site was developed using [Gitpod](https://www.gitpod.io/), stored on [Github](https://github.com/) and deployed with [Heroku](https://dashboard.heroku.com/apps).
+
+- Testing on Gitpod:
+    1. In the terminal, type "python3 manage.py runserver" and press enter to begin the application
+    2. Click "Open in Browser" on the pop-up
+    3. Once finished, use Ctrl + C in the terminal to close the application
+
+- Deploying on Heroku:
+    1. From the homescreen, click "New" and select "Create new app"
+    2. Choose app name, select region and click "Create"
+    3. Go to "Settings" and add PORT : 8000 to the Config Vars (CLOUDINARY_URL : {cloudinary url}, DATABASE_URL: {postgres url}, SECRET_KEY: {django secure key} also added but excluded from Github for security reasons)
+    4. Add heroku/python buildpack
+    5. Go to "Deploy" and connect Github repository
+    6. Select "Enable Automatic Deploys" and click "Deploy Branch"
+
