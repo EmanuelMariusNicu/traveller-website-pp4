@@ -162,7 +162,7 @@
 ![image](https://user-images.githubusercontent.com/108750655/235295753-26fa7dab-676f-40b8-b338-b82ef1fcf953.png)
 
 #### Post a comment
--User or viewer can post a comment and delete it.
+- User or viewer can post a comment and delete it.
 ![image](https://user-images.githubusercontent.com/108750655/235295768-da17bb59-57c5-4912-b3e1-56d04fb4b978.png)
 
 
