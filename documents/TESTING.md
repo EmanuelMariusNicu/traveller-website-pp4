@@ -23,7 +23,7 @@
 
 ## Manual testing
 
-### Homepage (https://pp4-recipebook.herokuapp.com/)
+### Homepage 
 - All internal links tested manually and found to be working as intended
 - All external links (social media links) tested manually and found to be working as intended
 - All dynamic content tested manually and found to be working as intended
