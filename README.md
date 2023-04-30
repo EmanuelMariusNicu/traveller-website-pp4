@@ -39,7 +39,6 @@
 ### Target Audience
 - This site is targeted towards anyone who enjoys traveling - beginner or advanced - who would like to either share their own trips with others or search for some new ones to try.
 
-- View [User Personas](documents/personas.pdf)
 
 ### User Stories
 
