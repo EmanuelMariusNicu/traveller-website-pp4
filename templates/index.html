@@ -16,7 +16,7 @@
                                  {% if "placeholder" in post.featured_image.url %}
                                 <img class="card-img-top" src="/static/images/travel.jpg" alt="Plane in the sky" style="width:100%">
                                  {% else %}
-                                <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="Cloudinary picture">
+                                <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="Cloudinary picture" width="250" height="250">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ post.author }}</p>
