@@ -95,9 +95,6 @@
 - The home page displays 2 rows with trip cards.
 - All pages are responsive thanks to bootstrap classes.
 - Browsing/search results pages present the related trips in a large flex container.
-- 
-
-### Data model
 
 
 ## Skeleton
