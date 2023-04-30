@@ -14,9 +14,12 @@
 
 ### Desktop
 - Lighthouse scores on desktop
+- ![image](https://user-images.githubusercontent.com/108750655/235345495-6eb0d44b-0d2e-4456-90d2-b8c7195e798a.png)
+
 
 ### Mobile
 - Lighthouse scores on mobile
+![image](https://user-images.githubusercontent.com/108750655/235345534-577fc4ad-003d-4ae7-8151-72f1be44f95c.png)
 
 ## Manual testing
 
@@ -96,3 +99,4 @@
 ## Bugs
 
 ### Unresolved Bugs
+- Increase mobile performance when uploading picture. 
