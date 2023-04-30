@@ -8,7 +8,7 @@
 ###  W3C HTML Validator (Validate by URI)
 - No errors, just few warnings.
 ###  W3C CSS Validator (Validate by direct input)
-
+- Np errors
 ## Lighthouse
 - All pages were ran through Lighthouse on Chrome Devtools for both desktop and mobile device display. Ran in incognito mode. Any issues were dealt with and all now have a high passing mark with any exceptions detailed in linked documents.
 
