@@ -100,3 +100,4 @@
 
 ### Unresolved Bugs
 - Increase mobile performance when uploading picture. 
+- Tags to be visible on the trip post container.
