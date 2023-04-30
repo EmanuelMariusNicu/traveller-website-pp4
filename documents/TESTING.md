@@ -23,12 +23,12 @@
 
 ## Manual testing
 
-### Homepage 
+#### Homepage 
 - All internal links tested manually and found to be working as intended
 - All external links (social media links) tested manually and found to be working as intended
 - All dynamic content tested manually and found to be working as intended
 
-### Browse by tag
+#### Browse by tag
 - All internal links tested manually and found to be working as intended
 - All dynamic content tested manually and found to be working as intended
 
