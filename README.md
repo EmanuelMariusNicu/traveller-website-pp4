@@ -52,20 +52,15 @@
 - (https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As a trip sharer, I can post my own trips so that I can share them with others.
 - (https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As a trip sharer, I can set my posted trips to private or public so that I can control who views them.
 - (https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As a trip sharer, I can edit my posted trips so that I can update any mistakes/changes.
-- (https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As a **user**, I can create an account so that I can interact with other users content and create my own.
-- (https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As a trip sharer, I can add tags to my recipes so that they are more visible to others.
+- (https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As a trip sharer, I can create an account so that I can interact with other users content and create my own.
+- (https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As a trip sharer, I can add tags to my trips so that they are more visible to others.
 
 #### Trips Viewers
 *These are users who intend to view trips that others have posted.*
-- (https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As a **user**, I can create an account so that I can interact with other users content and create my own.
-- (https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As a trip viewer, I can like and comment on other's trips so that I can share my opinion.
+- (https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As a trip viewer, I can create an account so that I can interact with other users content and create my own.
 - (https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As a trip viewer, I can search for trips so that I can find one that matches what I'm looking for.
 - (https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As a trip viewer, I can view the budget information of a trip so that I can make an informed decision based on my possibilities.
-- (https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As a trip viewer, I can view the recipe difficulty so that I can select a recipe which would suit my skill set.
-- (https://github.com/users/EmanuelMariusNicu/projects/1/views/1?layout=table) As a trip viewer, I can view the time requirements for the trips so that I can select a trip based on the time it takes.
 
-
----
 ## Scope
 ### Research
 - Before any planning, I conducted research into both social media and trip/blog websites and took note of the conventional layouts and formats as well as which features I thought enhanced the user's experience and would be good to include for my target audience(s).
@@ -256,8 +251,6 @@
 
 ### Content
 - [Code Institute lessons](https://codeinstitute.net/ie/)
-- Websites used for initial research:
-  - [Facebook](https://www.facebook.com/) for social features
 - Retrieving search term from search bar to display matches from [https://www.youtube.com/watch?v=AGtae4L5BbI](https://www.youtube.com/watch?v=AGtae4L5BbI)
 - Custom error pages from tutorial at [https://www.geeksforgeeks.org/django-creating-a-404-error-page/](https://www.geeksforgeeks.org/django-creating-a-404-error-page/)
 - Saving new slug when updating a trip at [https://stackoverflow.com/questions/33176569/slugfield-in-django-and-overriding-save](https://stackoverflow.com/questions/33176569/slugfield-in-django-and-overriding-save)
