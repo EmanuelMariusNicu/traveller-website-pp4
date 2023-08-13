@@ -133,3 +133,128 @@ The website was tested on the following browsers:
 |[I want to be able to access other user post so that I can learn more about the purpose, features, destinations of the TravellersWorld without needing to create an account]|Click on the "Home" button in the navigation bar on the landing page|The user should be directed to all the page posts |:white_check_mark:
 |[I can search for trips by tags so that I can find one that matches what I'm looking for]|Click on the "Browse" navigation link on the landing page|The user should be redirected to a dropdown with tags from "new" or "popular" to "easy" and "difficult" and the continent|:white_check_mark:
 |[I can search for trips by words in the search bar so that I can find one that matches what I'm looking for]|Click on the "Search trips" link in the navigation bar |The user should be able to find posts by words |:white_check_mark:
+
+#### As a Trip Sharer...
+These are users who intend to share trips on the platform.
+
+| **User Story** | **Action** | **Expected Result** | **Pass** |
+--- | --- | --- | :---:
+--- | --- | --- | :---:
+|[I can log in to my account]|Press the login button either on the landing page or in the navbar|The user should be directed to the login page|:white_check_mark:
+|[I can log out of my account]|Press the profile button and then select the logout option|The user should be logged out of their account|:white_check_mark:
+|[I can view all trips so that I can find new trips to try]|Click on the "Home" link in the navigation bar|The user is directed to the trip list view|:white_check_mark:
+|[I can click on a trip so that I can get all details and instructions about it]|Click on the trip title|The user is taken to the trip detail page|:white_check_mark:
+|[I can add a new trip so that I can share it with others]|Press the "Menu" button and then "Post your trip!" in the dropdown navigation bar|The user is directed to the trip form|:white_check_mark:
+|[I can edit my own trips so that I can update them if needed]|Click on the "Edit" button in the left corner below of the post detail page|The user is directed to the trip form to edit the trip|:white_check_mark:
+|[I can delete my own trips so that I can remove them if wanted]|Click the "Delete" button on the right corner below of the post detail page|The user is taken to a confirmation page to confirm the deletion of the trip. Upon confirming, the trip is deleted|:white_check_mark:
+|[I can comment on a Trip so that share my thoughts and suggestions]|Scroll down to the comment form on the trip post detail card and add a comment|The comment is successfully added|:white_check_mark:
+|[I can add tags to my trips so that they are more visible to others.]|When posting the trip you have one last field with tags to choose from |The post will contain these added tags that will make it more visible in "Browse" by tag |:white_check_mark:
+
+
+#### As a site owner...
+| **User Story** | **Action** | **Expected Result** | **Pass** |
+--- | --- | --- | :---:
+|[I can view and manage user accounts to ensure the security and integrity of the site and its users]|Access the Django admin section and navigate to the user management section|The admin section displays all users and their associated information. The owner can perform actions such as deleting users and managing their comments|:white_check_mark:
+|[I can view and manage trips to maintain a high standard of content and ensure the quality of the trips on the site]|Access the admin page and navigate to the trip management section|The admin page allows the owner to view and manage all trips, ensuring the quality and standards of the content|:white_check_mark:
+
+[Back to the top](#table-of-content)
+
+<br>
+
+### User Experience and improvements
+I conducted user testing with 8 individuals to gather feedback on their experience using the website. I asked them to perform the following tasks and provide feedback on their experience:
+
+- Create an account
+- Add a trip (1 or more)
+- Update a trip
+- Delete a trip
+- Comment on a trip
+- Test links
+
+### Full testing
+
+#### Navbar unauthorized user
+|**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
+|--- | --- | --- | --- | :---:
+|Logo|Redirects to index.page|Clicked on logo|index page loads|:white_check_mark:
+|Browse|Redirects to the dropdown by tags page |Clicked on link "Browse"|Browse page loads and shows the selected tag posts|:white_check_mark:
+|Login|Redirects to the login page|clicked on link "Login"|loads the login page and form|:white_check_mark:
+|Register|Redirects to to the signup page and form|clicked on the link "Register"|loads the sign up page and form|:white_check_mark:
+
+
+#### Navbar authorized user
+|**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
+|--- | --- | --- | --- | :---:
+|Logo|Redirects to the collective posts|Clicked on logo|the collective trip posts page loads|:white_check_mark:
+|Browse|Redirects to the dropdown by tags page |Clicked on link "Browse"|Browse page loads and shows the selected tag posts|:white_check_mark:
+|Search trips|Redirects to search card|Clicked on browse icon|The search card page is displayed|:white_check_mark:
+
+
+#### The logged in user menu
+|**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
+|--- | --- | --- | --- | :---:
+|Post your trip!|Redirects to the "Add Trip" page with the trip submission form|Clicked on "Add Trip" link|The "Add Trip" page loads, displaying the trip submission form|:white_check_mark:
+|Logout|Logs out the user and displays a confirmation message|Clicked on "Logout"|The user is successfully logged out and redirected to a page confirming the logout|:white_check_mark:
+
+#### Index page
+|**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
+|--- | --- | --- | --- | :---:
+|Register button|Redirects to the signup page with a registration form|Clicked on the "Register" button|The signup page and form are successfully loaded|:white_check_mark:
+|Login button|Redirects to the login page|Clicked on the "Login" button|The login page is successfully loaded|:white_check_mark:
+
+#### Browse page unauthorized user
+|**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
+|--- | --- | --- | --- | :---:
+|Browse button|Dropdown open with all tags|Clicked on the "Browse" button, eventually on a tag|The browse page clicked are successfully loaded|:white_check_mark:
+
+#### Browse page authorized user
+|**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
+|--- | --- | --- | --- | :---:
+|Browse button|Dropdown open with all tags|Clicked on the "Browse" button, eventually on a tag|The browse page clicked are successfully loaded|:white_check_mark:
+
+#### Sign up page
+|**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
+|--- | --- | --- | --- | :---:
+|Username|Field is required and should be a valid username format|Tested with empty field, invalid format|Error message displayed prompting the user to provide a valid username|:white_check_mark:
+|Email|Field is required and should be a valid email format|Tested with empty field, invalid format|Error message displayed prompting the user to provide a valid email address|:white_check_mark:
+|Password|Field is required and should meet password criteria|Tested with empty field, invalid criteria|Error message displayed prompting the user to provide a valid password|:white_check_mark:
+|Password confirmation|Field is required and should match the entered password|Tested with empty field, mismatched passwords|Error message displayed prompting the user to confirm the password correctly|:white_check_mark:
+|Sign up button|If the form is valid, the user is redirected to the login page with a flash message confirming successful registration and a prompt to login. If the form is not valid, an error message is displayed.|Clicked the button with valid and non-valid formats|The button functions as expected, redirecting to the appropriate pages and displaying the corresponding messages|:white_check_mark:
+|Login text link|Redirects to the login page|Clicked on the "Login" link|The login page and form were successfully loaded|:white_check_mark:
+
+#### Login page
+|**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
+|--- | --- | --- | --- | :---:
+|Username|The user enters a username|Tested with valid and unvalid username input|The username field accepts and saves the valid input. If invalid it displays an error message|:white_check_mark:
+|Password|The user enters a password|Tested with valid and unvalid password input|The password field functions correctly, allowing the user to input a valid password and displays an error message when not valid|:white_check_mark:
+|Sign up text link|Clicking the text link redirects to the sign-up page|Clicked on the "Sign up" text link|Successfully redirected to the sign-up page with the registration form|:white_check_mark:
+|Login|If the login form is valid, the user is logged in and redirected to the appropriate page. If the form is not valid, an error message is displayed.|Tested with valid and invalid login form input|The login button functions correctly, logging in the user with valid credentials and displaying error messages for invalid credentials|:white_check_mark:
+
+#### Trips page
+|**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
+|--- | --- | --- | --- | :---:
+|Trip card title link|Redirects to the trip detail page|Clicked on the title link of a trip card|Successfully redirected to the trip detail page|:white_check_mark:
+|Page buttons on pagination|Navigates to the correct page|Clicked on next/previous buttons in pagination|Successfully navigated to the correct page based on the button clicked|:white_check_mark:
+
+#### Recipe Detail page
+|**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
+|--- | --- | --- | --- | :---:
+|Comment|The comment is displayed with the date and username|Added a comment|The comment is successfully displayed with the corresponding date and username|:white_check_mark:
+|Edit button|	Only shown on the user's own trips. Takes the user to the trip form with pre-filled fields|Clicked on the edit button|Only shown on user's trips and successfully redirected to the trip form with the fields pre-filled|:white_check_mark:
+|Delete button|Only shown on the user's own trips. Redirects to the delete confirmation page|Clicked on the delete button|Only shown on user's trips and successfully redirected to the delete confirmation page|:white_check_mark:
+
+#### Edit trip page
+|**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
+|--- | --- | --- | --- | :---:
+|Edit|When changes are made and the "Edit" button is clicked, the changes should be saved, the user should be redirected to the trip detail page, and a flash message should confirm the update|Made changes and clicked on the "Edit" button|Changes were successfully saved, redirected to the trip detail page, and a flash message confirmed the update|:white_check_mark:
+
+#### Delete recipe page
+|**Feature**|**Expected Outcome**|**Testing Performed**|**Result**|**Pass**|
+|--- | --- | --- | --- | :---:
+|Delete button|Deletes the trip and redirects to the collective trips page|Clicked on the delete button|The trip was successfully deleted and I was redirected to the collective trips page|:white_check_mark:
+|Cancel button|Redirects to the trip detail page|Clicked on the Cancel button|Successfully redirected to the trip detail page|:white_check_mark:
+
+[Back to the top](#table-of-content)
+
+## Summary
+Overall, the TravellerWorld website performed well in all testings. The issues identified were acknowledged, and some were not addressed at the time due to design choices. 
