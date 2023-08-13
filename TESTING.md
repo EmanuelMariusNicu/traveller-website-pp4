@@ -76,12 +76,12 @@ The Traveller World website was tested using [Google Lighthouse in Google Chrome
 
 | **Tested** | **Performance Score** | **View Result** | **Pass** |
 --- | --- | --- | :---:
-|index| 96 / 100 | <details><summary>Screenshot of result</summary>![Result](https://github.com/EmanuelMariusNicu/traveller-website-pp4/assets/108750655/cc7ecee7-4928-4ba7-85d1-f928733461f6)</details> | :white_check_mark:
-|browse| 99 / 100 | <details><summary>Screenshot of result</summary>![Result](https://github.com/EmanuelMariusNicu/traveller-website-pp4/assets/108750655/17d1f5b9-1f02-4df8-9c7c-1fa344b0a5dc)</details> | :white_check_mark:
-|signup| 99 / 100 | <details><summary>Screenshot of result</summary>![Result](https://github.com/EmanuelMariusNicu/traveller-website-pp4/assets/108750655/35b6d493-1852-41db-8544-66515498a802)</details> | :white_check_mark:
-|login | 99 / 100 | <details><summary>Screenshot of result</summary>![Result](https://github.com/EmanuelMariusNicu/traveller-website-pp4/assets/108750655/421f9f64-b775-4f02-b8d1-9d43f10fe016)</details> | :white_check_mark:
-|post_detail| 85 / 100 |<details><summary>Screenshotofresult</summary>![Result](https://github.com/EmanuelMariusNicu/traveller-website-pp4/assets/108750655/e16508ff-2e75-42c7-957d-f62431abd1ff)</details>|:white_check_mark:
-|search_results| 85 / 100 | <details><summary>Screenshot of result</summary>![Result](https://github.com/EmanuelMariusNicu/traveller-website-pp4/assets/108750655/b0400772-a5bc-45dc-bf08-c6e46b3de2fa)</details>|:white_check_mark:
+|index| 96 / 100 | <details><summary>Result</summary>![Result](https://github.com/EmanuelMariusNicu/traveller-website-pp4/assets/108750655/cc7ecee7-4928-4ba7-85d1-f928733461f6)</details> | :white_check_mark:
+|browse| 99 / 100 | <details><summary>Result</summary>![Result](https://github.com/EmanuelMariusNicu/traveller-website-pp4/assets/108750655/17d1f5b9-1f02-4df8-9c7c-1fa344b0a5dc)</details> | :white_check_mark:
+|signup| 99 / 100 | <details><summary>Result</summary>![Result](https://github.com/EmanuelMariusNicu/traveller-website-pp4/assets/108750655/35b6d493-1852-41db-8544-66515498a802)</details> | :white_check_mark:
+|login | 99 / 100 | <details><summary>Result</summary>![Result](https://github.com/EmanuelMariusNicu/traveller-website-pp4/assets/108750655/421f9f64-b775-4f02-b8d1-9d43f10fe016)</details> | :white_check_mark:
+|post_detail| 85 / 100 |<details><summary>Result</summary>![Result](https://github.com/EmanuelMariusNicu/traveller-website-pp4/assets/108750655/e16508ff-2e75-42c7-957d-f62431abd1ff)</details> | :white_check_mark:
+|search_results| 85 / 100 | <details><summary>Result</summary>![Result](https://github.com/EmanuelMariusNicu/traveller-website-pp4/assets/108750655/b0400772-a5bc-45dc-bf08-c6e46b3de2fa)</details> | :white_check_mark:
 
 ### Mobile Performance
 - The majority of pages received scores above 90/100, indicating excellent performance.
@@ -89,15 +89,47 @@ The Traveller World website was tested using [Google Lighthouse in Google Chrome
   
 | **Tested** | **Performance Score** | **View Result** | **Pass** |
 --- | --- | --- | :---:
-|index| 96 / 100 | <details><summary>Screenshot of result</summary>![Result](https://github.com/EmanuelMariusNicu/traveller-website-pp4/assets/108750655/5f5d63ff-0d8d-4497-b0d2-ab8906ea1520)
-</details> | :white_check_mark:
-|browse| 67 / 100 | <details><summary>Screenshot of result</summary>![Result](https://github.com/EmanuelMariusNicu/traveller-website-pp4/assets/108750655/13bb7ef5-61b0-4bf5-bcec-cb363e73af14)
-</details> | :white_check_mark:
-|signup| 94 / 100 | <details><summary>Screenshot of result</summary>![Result](https://github.com/EmanuelMariusNicu/traveller-website-pp4/assets/108750655/a400b12b-79bc-4620-b744-4cf9c7b0af4d)
-</details> | :white_check_mark:
-|login | 94 / 100 | <details><summary>Screenshot of result</summary>![Result](https://github.com/EmanuelMariusNicu/traveller-website-pp4/assets/108750655/5bc919a5-56b0-4ac5-a20c-c7cb3643cfa3)
-</details> | :white_check_mark:
-|post_detail| 85 / 100 |<details><summary>Screenshotofresult</summary>![Result](https://github.com/EmanuelMariusNicu/traveller-website-pp4/assets/108750655/4b8793c8-8117-4253-a632-26e8c8e1ee6e)
-</details>|:white_check_mark:
-|search_results| 85 / 100 | <details><summary>Screenshot of result</summary>![Result](https://github.com/EmanuelMariusNicu/traveller-website-pp4/assets/108750655/dfcf0e6d-6f09-4174-9d60-91f714c3a9c1)
-</details>|:white_check_mark:
+|index| 96/100 | <details><summary>Result</summary>![Result](https://github.com/EmanuelMariusNicu/traveller-website-pp4/assets/108750655/5f5d63ff-0d8d-4497-b0d2-ab8906ea1520)</details> | :white_check_mark:
+|browse| 67/100 | <details><summary>Result</summary>![Result](https://github.com/EmanuelMariusNicu/traveller-website-pp4/assets/108750655/13bb7ef5-61b0-4bf5-bcec-cb363e73af14)</details> | :white_check_mark:
+|signup| 94/100 | <details><summary>Result</summary>![Result](https://github.com/EmanuelMariusNicu/traveller-website-pp4/assets/108750655/a400b12b-79bc-4620-b744-4cf9c7b0af4d)</details> | :white_check_mark:
+|login | 94/100 | <details><summary>Result</summary>![Result](https://github.com/EmanuelMariusNicu/traveller-website-pp4/assets/108750655/5bc919a5-56b0-4ac5-a20c-c7cb3643cfa3)</details> | :white_check_mark:
+|post_detail| 85/100 |<details><summary>Result</summary>![Result](https://github.com/EmanuelMariusNicu/traveller-website-pp4/assets/108750655/4b8793c8-8117-4253-a632-26e8c8e1ee6e)</details>|:white_check_mark:
+|search_results| 85/100 | <details><summary>Result</summary>![Result](https://github.com/EmanuelMariusNicu/traveller-website-pp4/assets/108750655/dfcf0e6d-6f09-4174-9d60-91f714c3a9c1)</details> | :white_check_mark:
+
+Overall, the Traveller World website performed well in terms of performance, providing a smooth user experience on both desktop and mobile devices.
+
+[Back to the top](#table-of-content
+
+
+## Performing tests on various devices 
+The website was tested on the following devices:
+- Samsung Galaxy Note S20 ultra
+- Apple iPhone 12
+
+In addition, the website was tested using Google Chrome Developer Tools Device Toggeling option for all available device options.
+
+[Back to the top](#table-of-content)
+
+<br>
+
+## Browser compability
+The website was tested on the following browsers:
+- Google Chrome
+- Mozilla Firefox
+- Microsoft Egde
+
+[Back to the top](#table-of-content)
+
+<br>
+
+## Manual Testing
+
+### Testing user stories
+
+#### As a first-time user/viewer...
+| **User Story** | **Action** | **Expected Result** | **Pass** |
+--- | --- | --- | :---:
+|[I can create an account so that I can post my own trips to share with others.]|Click on the "Register" navigation link |The user should be redirected to the signup form|:white_check_mark:
+|[I want to be able to access other user post so that I can learn more about the purpose, features, destinations of the TravellersWorld without needing to create an account]|Click on the "Home" button in the navigation bar on the landing page|The user should be directed to all the page posts |:white_check_mark:
+|[I can search for trips by tags so that I can find one that matches what I'm looking for]|Click on the "Browse" navigation link on the landing page|The user should be redirected to a dropdown with tags from "new" or "popular" to "easy" and "difficult" and the continent|:white_check_mark:
+|[I can search for trips by words in the search bar so that I can find one that matches what I'm looking for]|Click on the "Search trips" link in the navigation bar |The user should be able to find posts by words |:white_check_mark:
