@@ -3,11 +3,11 @@
 <!-- Bootstrap card used across the site to showcase trips when user is browsing and searching -->
 <div class="card recipe-card m-2 text-start p-0 flex-grow-0" style="width: 18rem;">
     <div class="card-image">
-        {% if not trip.featured_image %}
-        <img src="https://res.cloudinary.com/duu8kj52z/image/upload/v1692519362/mc8wese1ixvpt1ggdrcl.webp" class="card-img-top" alt="Placeholder image">
-        {% else %}
+      {% if "placeholder" in trip.featured_image.url %}
+        <img class="card-img-top" src="https://res.cloudinary.com/duu8kj52z/image/upload/v1692519362/mc8wese1ixvpt1ggdrcl.webp" alt="Plane in the sky" style="width:100%">
+      {% else %}
         <img src=" {{ trip.featured_image.url }}" class="card-img-top" alt="Image of {{ trip.title }}">
-        {% endif %}
+      {% endif %}
       </div>
   <!-- Quick info and stretched link -->
   <div class="card-body">
