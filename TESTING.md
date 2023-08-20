@@ -17,6 +17,7 @@ The testing.md file provides an overview of the testing conducted on the Travell
     1. [Testing user stories](#testing-user-stories)
     2. [User Experience and Improvements](#user-experience-and-improvements)
     3. [Full testing](#full-testing)
+    4. [Bugs](#bugs)
 8. [Summary](#summary)
 
 
@@ -260,7 +261,11 @@ I conducted user testing with 8 individuals to gather feedback on their experien
 |Delete button|Deletes the trip and redirects to the collective trips page|Clicked on the delete button|The trip was successfully deleted and I was redirected to the collective trips page|:white_check_mark:
 |Cancel button|Redirects to the trip detail page|Clicked on the Cancel button|Successfully redirected to the trip detail page|:white_check_mark:
 
-[Back to the top](#table-of-content)
+### Bugs
+ - To be solved:
+    - Cloudinary image size for all user post.
+    - When trying the mobile responsiveness from F12 (developer tools), sometimes it doesn't work well the first time and needs a refresh or a click on the toggle device toolbar.
+ - [Back to the top](#table-of-content)
 
 ## Summary
 Overall, the TravellerWorld website performed well in all testings. The issues identified were acknowledged, and some were not addressed at the time due to design choices. 
