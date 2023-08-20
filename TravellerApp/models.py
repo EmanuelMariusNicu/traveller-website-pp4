@@ -22,10 +22,10 @@ class Trip(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    budget = models.IntegerField()
+    budget = models.PositiveIntegerField()
     route = models.TextField()
     accommodation = models.TextField()
-    guide = models.TextField(blank=True)
+    guide = models.TextField()
     additional_info = models.TextField(blank=True)
     status = models.IntegerField(choices=STATUS, default=1)
     likes = models.ManyToManyField(

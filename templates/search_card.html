@@ -4,7 +4,7 @@
 <div class="card recipe-card m-2 text-start p-0 flex-grow-0" style="width: 18rem;">
     <div class="card-image">
         {% if not trip.featured_image %}
-        <img src="{% static 'images/travel.jpg' %}" class="card-img-top" alt="Placeholder image">
+        <img src="https://res.cloudinary.com/duu8kj52z/image/upload/v1692519362/mc8wese1ixvpt1ggdrcl.webp" class="card-img-top" alt="Placeholder image">
         {% else %}
         <img src=" {{ trip.featured_image.url }}" class="card-img-top" alt="Image of {{ trip.title }}">
         {% endif %}
