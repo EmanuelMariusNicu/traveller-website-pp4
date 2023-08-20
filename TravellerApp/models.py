@@ -22,7 +22,7 @@ class Trip(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    budget = models.TextField()
+    budget = models.IntegerField()
     route = models.TextField()
     accommodation = models.TextField()
     guide = models.TextField(blank=True)
